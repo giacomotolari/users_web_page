@@ -12,6 +12,13 @@ function Form({ setUsers }) {
     setInputType(inputType === "password" ? "text" : "password");
   };
 
+  const emptyInputFields = () => {
+    setName("");
+    setUsername("");
+    setEmail("");
+    setPassword("");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -24,6 +31,8 @@ function Form({ setUsers }) {
     };
 
     setUsers((prevUsers) => [...prevUsers, newUser]);
+
+    emptyInputFields();
   };
 
   return (
