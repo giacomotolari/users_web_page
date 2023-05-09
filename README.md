@@ -27,7 +27,7 @@ Fetch from this [API](https://jsonplaceholder.typicode.com/users) when the compo
 
 ## TASK 4 - localStorage
     
-Save the response of the fetch in a key calls ***users*** in the localStorage.
+Save the response of the fetch in a key called ***users*** in the localStorage.
 ## TASK 5 - state-init-value
     
 Create a state called ***users*** which has as its initial value the value of the ***key users in the localstorage***.
@@ -36,25 +36,21 @@ Create a state called ***users*** which has as its initial value the value of th
 
 Update the fetch code, because you only want to fetch if the ***users state*** is not empty.
 
-## TASK 7 - state-init-value
-    
-Create a state called ***users*** which has as its initial value the value of the ***key users in the localstorage***.
-
 ## TASK 8 - show-users
     
 Show all users in the UI .
 Show only the name, username and email of each user.
 
-## TASK 9 - styling
+## TASK 8 - styling
     
 Style the App to your taste (use scss).
 
-## TASK 10 - form
+## TASK 9 - form
     
 Create a form, that allows you to add a new user on the ***users*** state.
 You need an input for the name, username and email and password (you don't need to show the password in the UI).
 
-## TASK 11 - password-toggle
+## TASK 10 - password-toggle
     
 Add an icon in the input-password that gives you the possibility to hide the password, if the password is hidden then show another icon that gives you the possibility to show the password (then you will only be able to see one icon).
 
@@ -72,8 +68,10 @@ Change the border colour of the containers showing each user in the UI when hove
 
 Create a useFetch custom hook, which encapsulates all the logic of your fetch.
 
+## TASK 14 - empty-fields
 
+Make the input-fields empty after the new user is created
 
+## TASk 15 - form-validation
 
-
-
+Each input must contain at least 5 characters and you can't have more users with the same username.
