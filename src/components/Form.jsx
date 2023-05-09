@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ImEyeBlocked, ImEye } from "react-icons/im";
 
 function Form({ setUsers }) {
@@ -10,6 +10,9 @@ function Form({ setUsers }) {
   });
   const [inputType, setInputType] = useState("password");
 
+  const inputNameRef = useRef(null);
+  console.log("inputNameRef:", inputNameRef);
+
   const atLeastOneFieldIsEmpty =
     !newUser.name || !newUser.username || !newUser.email || !newUser.password;
 
@@ -18,6 +21,7 @@ function Form({ setUsers }) {
   };
 
   const emptyInputFields = () => {
+
     setNewUser({
       name: "",
       username: "",
@@ -41,6 +45,7 @@ function Form({ setUsers }) {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        ref={inputNameRef}
         placeholder="name"
         type="text"
         value={newUser.name}
@@ -48,6 +53,8 @@ function Form({ setUsers }) {
         onChange={(e) =>
           setNewUser((prevUser) => ({ ...prevUser, name: e.target.value }))
         }
+        onFocus={() => (inputNameRef.current.style.backgroundColor = "yellow")}
+        onBlur={() => (inputNameRef.current.style.backgroundColor = "white")}
       />
       <input
         placeholder="user name"
@@ -60,6 +67,8 @@ function Form({ setUsers }) {
             username: e.target.value,
           }))
         }
+        onFocus={(e) => (e.currentTarget.style.backgroundColor = "yellow")}
+        onBlur={(e) => (e.currentTarget.style.backgroundColor = "white")}
       />
       <input
         placeholder="email"
@@ -68,6 +77,8 @@ function Form({ setUsers }) {
         onChange={(e) =>
           setNewUser((prevUser) => ({ ...prevUser, email: e.target.value }))
         }
+        onFocus={(e) => (e.currentTarget.style.backgroundColor = "yellow")}
+        onBlur={(e) => (e.currentTarget.style.backgroundColor = "white")}
       />
 
       <div className="password-icon-input-wrapper">
@@ -92,6 +103,8 @@ function Form({ setUsers }) {
             e.preventDefault();
             return false;
           }}
+          onFocus={(e) => (e.currentTarget.style.backgroundColor = "yellow")}
+          onBlur={(e) => (e.currentTarget.style.backgroundColor = "white")}
         />
         {inputType === "password" ? (
           <ImEyeBlocked
