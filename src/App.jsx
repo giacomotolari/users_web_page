@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import "./styles/app.scss";
 import Users from "./components/UserList";
+import Form from "./components/Form";
 
 function App() {
   const [users, setUsers] = useState(() => {
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <Form setUsers={setUsers} />
       <Users users={users} />
     </div>
   );
