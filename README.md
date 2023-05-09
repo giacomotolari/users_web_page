@@ -56,26 +56,31 @@ Add an icon in the input-password that gives you the possibility to hide the pas
 
 Use the [react-icons](https://react-icons.github.io/react-icons/) as icons.
 
-## TASK 11 - input-focus
-
-Give inputs a different backgroundColor when they are focused.
-
-## TASK 12 - hover-border
-
-Change the border colour of the containers showing each user in the UI when hovering with the mouse.
-
-## TASK 13 - custom-hook
-
-Create a useFetch custom hook, which encapsulates all the logic of your fetch.
-
-## TASK 14 - empty-fields
+## TASK 11 - empty-fields
 
 Make the input-fields empty after the new user is created
 
-## TASk 15 - form-validation
+## TASk 12 - form-validation
 
 Non field can be empty and you can't have more users with the same username.
 
-## TASk 15 - disable-submit-button
+## TASk 13 - disable-submit-button
 
 If the validations are not true disable the click of the submit button.
+
+## TASk 14 - newUser-state
+
+Update the Form code using only one state called newUser instead to have a state per input.
+
+## TASK 15 - input-focus
+
+Give inputs a different backgroundColor when they are focused.
+
+## TASK 16 - hover-border
+
+Change the border colour of the containers showing each user in the UI when hovering with the mouse.
+
+## TASK 17 - custom-hook
+
+Create a useFetch custom hook, which encapsulates all the logic of your fetch.
+

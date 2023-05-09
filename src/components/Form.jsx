@@ -2,36 +2,38 @@ import { useState } from "react";
 import { ImEyeBlocked, ImEye } from "react-icons/im";
 
 function Form({ setUsers }) {
-  const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [newUser, setNewUser] = useState({
+    name: "",
+    username: "",
+    email: "",
+    password: "",
+  });
   const [inputType, setInputType] = useState("password");
 
-  const atLeastOneFieldIsEmpty = !name || !username || !email || !password;
+  const atLeastOneFieldIsEmpty =
+    !newUser.name || !newUser.username || !newUser.email || !newUser.password;
 
   const handleShowPassword = () => {
     setInputType(inputType === "password" ? "text" : "password");
   };
 
   const emptyInputFields = () => {
-    setName("");
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    setNewUser({
+      name: "",
+      username: "",
+      email: "",
+      password: "",
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newUser = {
+    const userToAdd = {
       id: crypto.randomUUID(),
-      name,
-      username,
-      email,
-      password,
+      ...newUser,
     };
 
-    setUsers((prevUsers) => [...prevUsers, newUser]);
+    setUsers((prevUsers) => [...prevUsers, userToAdd]);
 
     emptyInputFields();
   };
@@ -41,31 +43,45 @@ function Form({ setUsers }) {
       <input
         placeholder="name"
         type="text"
-        value={name}
+        value={newUser.name}
         maxLength={15}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) =>
+          setNewUser((prevUser) => ({ ...prevUser, name: e.target.value }))
+        }
       />
       <input
         placeholder="user name"
         type="text"
         maxLength={15}
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        value={newUser.username}
+        onChange={(e) =>
+          setNewUser((prevUser) => ({
+            ...prevUser,
+            username: e.target.value,
+          }))
+        }
       />
       <input
         placeholder="email"
         type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={newUser.email}
+        onChange={(e) =>
+          setNewUser((prevUser) => ({ ...prevUser, email: e.target.value }))
+        }
       />
 
       <div className="password-icon-input-wrapper">
         <input
           type={inputType}
           id="password"
-          value={password}
+          value={newUser.password}
           placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) =>
+            setNewUser((prevUser) => ({
+              ...prevUser,
+              password: e.target.value,
+            }))
+          }
           minLength={3}
           maxLength={20}
           onPaste={(e) => {
