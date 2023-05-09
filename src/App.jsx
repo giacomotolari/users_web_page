@@ -7,17 +7,20 @@ function App() {
     const storedData = localStorage.getItem("users");
     return storedData ? JSON.parse(storedData) : [];
   });
-  console.log('users:',users);
+  console.log("users:", users);
   const API_URL = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
+
     const fetchData = async () => {
+      console.log("fetching data...")
       const response = await fetch(API_URL);
       const data = await response.json();
       localStorage.setItem("users", JSON.stringify(data));
     };
-    fetchData();
-  }, []);
+    // fetch data if users is empty
+    users.length === 0 && fetchData();
+  }, [users.length]);
 
   return <div className="App"></div>;
 }
