@@ -11,12 +11,13 @@ function App() {
   });
 
   const API_URL = "https://jsonplaceholder.typicode.com/users";
-
+  
   useEffect(() => {
     const fetchData = async () => {
+      console.log('users-test:',users);
       const response = await fetch(API_URL);
       const data = await response.json();
-      localStorage.setItem("users", JSON.stringify(data));
+      setUsers(data);
     };
     // fetch data only if users array is empty
     if (users.length === 0) {

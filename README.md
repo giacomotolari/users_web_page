@@ -7,11 +7,18 @@
 - useState
 - useEffect
 - fetch in react
-- create custom hook
 - localStorage in react
 - react forms
 - react icons
 - useRef
+
+### We will create a web page where we can add users with a form and save them in the localStorage.
+
+### The first users of the page will be taken from an API.
+
+### See the image to give you an idea of what the page will look like.
+
+![GIF preview](https://github.com/giacomotolari/users_web_page/blob/main/users-page.gif)
 
 ## TASK 1 - react-init
 
@@ -56,22 +63,30 @@ Add an icon in the input-password that gives you the possibility to hide the pas
 
 Use the [react-icons](https://react-icons.github.io/react-icons/) as icons.
 
-## TASK 11 - input-focus
-
-Give inputs a different backgroundColor when they are focused.
-
-## TASK 12 - hover-border
-
-Change the border colour of the containers showing each user in the UI when hovering with the mouse.
-
-## TASK 13 - custom-hook
-
-Create a useFetch custom hook, which encapsulates all the logic of your fetch.
-
-## TASK 14 - empty-fields
+## TASK 11 - empty-fields
 
 Make the input-fields empty after the new user is created
 
-## TASk 15 - form-validation
+## TASk 12 - form-validation
 
-Each input must contain at least 5 characters and you can't have more users with the same username.
+Non field can be empty and you can't have more users with the same username.
+
+## TASk 13 - disable-submit-button
+
+If the validations are not true disable the click of the submit button.
+
+## TASk 14 - newUser-state
+
+Update the Form code using only one state called newUser instead to have a state per input.
+
+## TASK 15 - input-focus
+
+Give inputs a different backgroundColor when they are focused.
+
+## TASK 16 - hover-border
+
+Change the border colour of the containers showing each user in the UI when hovering with the mouse.
+
+## TASK 17 - autofocus
+
+Give a focus on the name input in the form when the component loads.
