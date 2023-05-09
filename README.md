@@ -20,7 +20,6 @@
 
 ![GIF preview](https://github.com/giacomotolari/users_web_page/blob/main/users-page.gif)
 
-
 ## TASK 1 - react-init
 
 Create a react basic project.
