@@ -74,4 +74,8 @@ Make the input-fields empty after the new user is created
 
 ## TASk 15 - form-validation
 
-Each input must contain at least 5 characters and you can't have more users with the same username.
+Non field can be empty and you can't have more users with the same username.
+
+## TASk 15 - disable-submit-button
+
+If the validations are not true disable the click of the submit button.

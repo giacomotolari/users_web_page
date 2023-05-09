@@ -30,6 +30,9 @@ function Form({ setUsers }) {
       password,
     };
 
+    if (!name || !username || !email || !password)
+      return alert("Please fill all fields");
+
     setUsers((prevUsers) => [...prevUsers, newUser]);
 
     emptyInputFields();
