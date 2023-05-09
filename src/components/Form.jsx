@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ImEyeBlocked, ImEye } from "react-icons/im";
 
 function Form({ setUsers }) {
@@ -21,7 +21,6 @@ function Form({ setUsers }) {
   };
 
   const emptyInputFields = () => {
-
     setNewUser({
       name: "",
       username: "",
@@ -41,6 +40,10 @@ function Form({ setUsers }) {
 
     emptyInputFields();
   };
+
+  useEffect(() => {
+    inputNameRef.current.focus();
+  }, []);
 
   return (
     <form onSubmit={handleSubmit}>
