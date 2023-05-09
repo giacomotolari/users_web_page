@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ImEyeBlocked, ImEye } from "react-icons/im";
 
-function Form({ setUsers }) {
+function Form({ setUsers, users }) {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -30,8 +30,15 @@ function Form({ setUsers }) {
       password,
     };
 
+    const userExist = users.some((user) => user.username === username);
+    console.log(
+      "🚀 ~ file: Form.jsx:34 ~ handleSubmit ~ userExist:",
+      userExist
+    );
+
     if (!name || !username || !email || !password)
       return alert("Please fill all fields");
+    else if (userExist) return alert("User already exist");
 
     setUsers((prevUsers) => [...prevUsers, newUser]);
 
