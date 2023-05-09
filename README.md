@@ -18,7 +18,7 @@
 
 ### See the image to give you an idea of what the page will look like.
 
-![Animated cat gif](https://github.com/giacomotolari/users_web_page/edit/main/users-page.gif
+![](https://github.com/giacomotolari/users_web_page/edit/main/users-page.gif)
 
 
 ## TASK 1 - react-init
