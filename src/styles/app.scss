@@ -33,5 +33,17 @@
       margin-top: 16px;
       cursor: pointer;
     }
+
+    .password-icon-input-wrapper {
+      position: relative;
+    }
+    .icon-eye-password {
+      position: absolute;
+      right: 0.7rem;
+      top: 0.6rem;
+      z-index: 99999999999999999999999;
+      color: black;
+      cursor: pointer;
+    }
   }
 }

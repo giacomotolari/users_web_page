@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { ImEyeBlocked, ImEye } from "react-icons/im";
 
 function Form({ setUsers }) {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [inputType, setInputType] = useState("password");
+
+  const handleShowPassword = () => {
+    setInputType(inputType === "password" ? "text" : "password");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,11 +32,13 @@ function Form({ setUsers }) {
         placeholder="name"
         type="text"
         value={name}
+        maxLength={15}
         onChange={(e) => setName(e.target.value)}
       />
       <input
         placeholder="user name"
         type="text"
+        maxLength={15}
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
@@ -40,12 +48,34 @@ function Form({ setUsers }) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input
-        placeholder="password"
-        type="text"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+
+      <div className="password-icon-input-wrapper">
+        <input
+          type={inputType}
+          id="password"
+          value={password}
+          placeholder="password"
+          onChange={(e) => setPassword(e.target.value)}
+          minLength={3}
+          maxLength={20}
+          onPaste={(e) => {
+            e.preventDefault();
+            return false;
+          }}
+          onCopy={(e) => {
+            e.preventDefault();
+            return false;
+          }}
+        />
+        {inputType === "password" ? (
+          <ImEyeBlocked
+            className="icon-eye-password"
+            onClick={handleShowPassword}
+          />
+        ) : (
+          <ImEye className="icon-eye-password" onClick={handleShowPassword} />
+        )}
+      </div>
       <button type="submit">Add User</button>
     </form>
   );
