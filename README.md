@@ -41,14 +41,13 @@ Update the fetch code, because you only want to fetch if the ***users state*** i
 Show all users in the UI .
 Show only the name, username and email of each user.
 
-## TASK 8 - styling
-    
-Style the App to your taste (use scss).
-
-## TASK 9 - form
+## TASK 8 - form
     
 Create a form, that allows you to add a new user on the ***users*** state.
 You need an input for the name, username and email and password (you don't need to show the password in the UI).
+## TASK 9 - styling
+    
+Style the App to your taste (use scss).
 
 ## TASK 10 - password-toggle
     

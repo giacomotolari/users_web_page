@@ -1,4 +1,13 @@
 .App {
-  background-color: red;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .user-container {
+    border: 2px solid yellow;
+    padding: 10px;
+    margin: 10px
+  }
 }

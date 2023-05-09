@@ -2,7 +2,10 @@ function Users({ users }) {
   return (
     <>
       {users.map((user) => (
-        <div key={user.id ? user.id : crypto.randomUUID()}>
+        <div
+          key={user.id ? user.id : crypto.randomUUID()}
+          className="user-container"
+        >
           <p>{user.name}</p>
           <p>{user.username}</p>
           <p>{user.email}</p>
