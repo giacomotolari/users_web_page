@@ -27,7 +27,7 @@ Fetch from this [API](https://jsonplaceholder.typicode.com/users) when the compo
 
 ## TASK 4 - localStorage
     
-Save the response of the fetch in a key calls ***users*** in the localStorage.
+Save the response of the fetch in a key called ***users*** in the localStorage.
 ## TASK 5 - state-init-value
     
 Create a state called ***users*** which has as its initial value the value of the ***key users in the localstorage***.

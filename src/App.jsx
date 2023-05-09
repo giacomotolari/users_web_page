@@ -10,6 +10,7 @@ function App() {
       const response = await fetch(API_URL);
       const data = await response.json();
       console.log(data);
+      localStorage.setItem("users", JSON.stringify(data));
     };
     fetchData();
   }, []);
