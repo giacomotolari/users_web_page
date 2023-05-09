@@ -7,7 +7,6 @@
 - useState
 - useEffect
 - fetch in react
-- create custom hook
 - localStorage in react
 - react forms
 - react icons
@@ -79,8 +78,3 @@ Give inputs a different backgroundColor when they are focused.
 ## TASK 16 - hover-border
 
 Change the border colour of the containers showing each user in the UI when hovering with the mouse.
-
-## TASK 17 - custom-hook
-
-Create a useFetch custom hook, which encapsulates all the logic of your fetch.
-
