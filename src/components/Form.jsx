@@ -8,6 +8,8 @@ function Form({ setUsers }) {
   const [password, setPassword] = useState("");
   const [inputType, setInputType] = useState("password");
 
+  const atLeastOneFieldIsEmpty = !name || !username || !email || !password;
+
   const handleShowPassword = () => {
     setInputType(inputType === "password" ? "text" : "password");
   };
@@ -21,7 +23,6 @@ function Form({ setUsers }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const newUser = {
       id: crypto.randomUUID(),
       name,
@@ -29,9 +30,6 @@ function Form({ setUsers }) {
       email,
       password,
     };
-
-    if (!name || !username || !email || !password)
-      return alert("Please fill all fields");
 
     setUsers((prevUsers) => [...prevUsers, newUser]);
 
@@ -88,7 +86,9 @@ function Form({ setUsers }) {
           <ImEye className="icon-eye-password" onClick={handleShowPassword} />
         )}
       </div>
-      <button type="submit">Add User</button>
+      <button type="submit" disabled={atLeastOneFieldIsEmpty}>
+        Add User
+      </button>
     </form>
   );
 }
