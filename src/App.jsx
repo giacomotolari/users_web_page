@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log('users-test:',users);
+      console.log("users-test:", users);
       const response = await fetch(API_URL);
       const data = await response.json();
       setUsers(data);
@@ -27,10 +27,10 @@ function App() {
       localStorage.setItem("users", JSON.stringify(users));
     }
   }, [users]);
-  
+
   return (
     <div className="App">
-      <Form setUsers={setUsers} />
+      <Form setUsers={setUsers} users={users} />
       <Users users={users} />
     </div>
   );
