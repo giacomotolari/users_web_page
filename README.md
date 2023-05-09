@@ -12,6 +12,14 @@
 - react icons
 - useRef
 
+### We will create a web page where we can add users with a form and save them in the localStorage.
+
+### The first users of the page will be taken from an API.
+
+### See the image to give you an idea of what the page will look like.
+
+![GIF preview](https://github.com/giacomotolari/users_web_page/blob/main/users-page.gif)
+
 ## TASK 1 - react-init
 
 Create a react basic project.
@@ -78,3 +86,7 @@ Give inputs a different backgroundColor when they are focused.
 ## TASK 16 - hover-border
 
 Change the border colour of the containers showing each user in the UI when hovering with the mouse.
+
+## TASK 17 - autofocus
+
+Give a focus on the name input in the form when the component loads.
