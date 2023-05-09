@@ -68,6 +68,9 @@ Give inputs a different backgroundColor when they are focused.
 
 Change the border colour of the containers showing each user in the UI when hovering with the mouse.
 
+## TASK 13 - custom-hook
+
+Create a useFetch custom hook, which encapsulates all the logic of your fetch.
 
 
 
