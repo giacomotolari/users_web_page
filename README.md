@@ -27,7 +27,7 @@ Fetch from this [API](https://jsonplaceholder.typicode.com/users) when the compo
 
 ## TASK 4 - localStorage
     
-Save the response of the fetch in a key called ***users*** in the localStorage.
+Save the response of the fetch in a key called ***users*** in the localStorage because we want save the users in the localStorage and if we refresh the web page, we still can see the users.
 ## TASK 5 - state-init-value
     
 Create a state called ***users*** which has as its initial value the value of the ***key users in the localstorage***.
@@ -44,6 +44,7 @@ Show only the name, username and email of each user.
 ## TASK 8 - form
     
 Create a form, that allows you to add a new user on the ***users*** state.
+When you create a new user, he/she must be saved in the localStorage also.
 You need an input for the name, username and email and password (you don't need to show the password in the UI).
 ## TASK 9 - styling
     
