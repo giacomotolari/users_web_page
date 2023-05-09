@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <Form setUsers={setUsers} />
+      <Form setUsers={setUsers} users={users} />
       <Users users={users} />
     </div>
   );
