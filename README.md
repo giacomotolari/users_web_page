@@ -18,7 +18,7 @@
 
 ### See the image to give you an idea of what the page will look like.
 
-![GIF preview](https://github.com/giacomotolari/users_web_page/edit/main/users-page.gif)
+![GIF preview](https://github.com/giacomotolari/users_web_page/blob/main/users-page.gif)
 
 
 ## TASK 1 - react-init
