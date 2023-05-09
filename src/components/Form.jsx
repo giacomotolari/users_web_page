@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ImEyeBlocked, ImEye } from "react-icons/im";
 
-function Form({ setUsers }) {
+function Form({ setUsers, users }) {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -35,6 +35,8 @@ function Form({ setUsers }) {
 
     emptyInputFields();
   };
+
+  const userExist = users.some((user) => user.username === username);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -86,7 +88,7 @@ function Form({ setUsers }) {
           <ImEye className="icon-eye-password" onClick={handleShowPassword} />
         )}
       </div>
-      <button type="submit" disabled={atLeastOneFieldIsEmpty}>
+      <button type="submit" disabled={atLeastOneFieldIsEmpty || userExist}>
         Add User
       </button>
     </form>
