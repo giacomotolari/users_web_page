@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import "./styles/app.scss";
+import Users from "./components/UserList";
 
 function App() {
   const [users, setUsers] = useState(() => {
@@ -11,9 +12,8 @@ function App() {
   const API_URL = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
-
     const fetchData = async () => {
-      console.log("fetching data...")
+      console.log("fetching data...");
       const response = await fetch(API_URL);
       const data = await response.json();
       localStorage.setItem("users", JSON.stringify(data));
@@ -22,7 +22,11 @@ function App() {
     users.length === 0 && fetchData();
   }, [users.length]);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Users users={users} />
+    </div>
+  );
 }
 
 export default App;
