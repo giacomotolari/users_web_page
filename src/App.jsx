@@ -13,14 +13,19 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log("fetching data...");
+      console.log("users-test:", users);
       const response = await fetch(API_URL);
       const data = await response.json();
-      localStorage.setItem("users", JSON.stringify(data));
+      setUsers(data);
     };
-    // fetch data if users is empty
-    users.length === 0 && fetchData();
-  }, [users.length]);
+    // fetch data only if users array is empty
+    if (users.length === 0) {
+      fetchData();
+    } else {
+      // save users array to local storage if it is not empty and users updated
+      localStorage.setItem("users", JSON.stringify(users));
+    }
+  }, [users]);
 
   return (
     <div className="App">
