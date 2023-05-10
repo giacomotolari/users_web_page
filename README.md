@@ -41,9 +41,9 @@ Create a state called ***users*** which has as its initial value the value of th
 
 ## TASK 6 - update fetch
 
-Update the fetch code, because you only want to fetch if the ***users state*** is not empty.
+Update the fetch code, because you only want to fetch if the ***users state*** is empty.
 
-## TASK 8 - show-users
+## TASK 7 - show-users
     
 Show all users in the UI .
 Show only the name, username and email of each user.
